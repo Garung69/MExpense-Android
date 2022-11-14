@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">M_Expense</string>
+    <string name="start_trip">New Trip</string>
+    <string name="history_trip">History</string>
+    <string name="recommended_tip"><![CDATA[Recommended & Tip]]></string>
+    <string name="invalid_name">Please input name of trip</string>
+</resources>

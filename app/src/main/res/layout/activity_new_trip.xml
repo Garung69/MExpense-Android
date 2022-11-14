@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".newTrip">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/SecondaryTextCoor">
+
+                <ImageView
+                    android:id="@+id/newTrip_backbtn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#00FFFFFF"
+                    android:src="@drawable/back">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="65dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Create New Trip"
+                    android:textColor="@color/white"
+                    android:textSize="24dp">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputTripName"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Trip Name"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputTripDescription"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Trip Description"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/labelDestinationFrom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="Destination From"
+                        android:textColor="@color/white"
+                        android:textSize="18dp">
+
+                    </TextView>
+
+                    <Spinner
+                        android:id="@+id/inputDestinationFrom"
+                        style="@style/DialogSpinner"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/labelDestinationFrom"
+                        android:layout_alignStart="@+id/labelDestinationFrom"
+                        android:layout_marginTop="5dp"
+                        android:backgroundTint="@color/white"
+                        android:popupBackground="@color/white"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/labelDestinationTo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="160dp"
+                        android:text="Destination To"
+                        android:textColor="@color/white"
+                        android:textSize="18dp">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/createDestinationBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/labelDestinationTo"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_toEndOf="@+id/labelDestinationTo"
+                        android:text="create new destination?"
+                        android:textColor="#E89A71"
+                        android:textSize="12dp"
+                        android:textStyle="italic">
+
+                    </TextView>
+
+                    <Spinner
+                        android:id="@+id/inputDestinationTo"
+                        style="@style/DialogSpinner"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/labelDestinationTo"
+                        android:layout_alignStart="@+id/labelDestinationTo"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginLeft="160dp"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <EditText
+                        android:id="@+id/inputDate"
+                        android:layout_width="100dp"
+                        android:layout_height="45dp"
+                        android:layout_alignTop="@+id/inputDestinationTo"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="-7dp"
+                        android:layout_marginRight="5dp"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="Date Start"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_toStartOf="@+id/imageView"
+                            android:layout_toLeftOf="@+id/imageView"
+                            android:animateLayoutChanges="true"
+                            android:gravity="center|left"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:text="Requires risk assessment"
+                                android:textColor="@color/white"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/selected_risk"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="5dp"
+                                android:text="None"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            app:srcCompat="@drawable/ic_arrow" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/collapsable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:animateLayoutChanges="true"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:animateLayoutChanges="true"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <RadioGroup
+                                android:id="@+id/rd_Risk"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingLeft="20dp"
+                                android:paddingRight="5dp">
+
+                                <RadioButton
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start|center"
+                                    android:layout_marginBottom="5dp"
+                                    android:gravity="start|center"
+                                    android:layoutDirection="rtl"
+                                    android:text="No"
+                                    android:textAlignment="textStart"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start|center"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:gravity="start|center"
+                                    android:layoutDirection="rtl"
+                                    android:text="Yes"
+                                    android:textAlignment="textStart"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+
+                            </RadioGroup>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_toStartOf="@+id/imageView2"
+                            android:layout_toLeftOf="@+id/imageView2"
+                            android:animateLayoutChanges="true"
+                            android:gravity="center|left"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:text="Rate Trip"
+                                android:textColor="@color/white"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/selected_rate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="5dp"
+                                android:text="None!"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            app:srcCompat="@drawable/ic_arrow" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/collapsable2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:animateLayoutChanges="true"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/layout2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:animateLayoutChanges="true"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <RadioGroup
+                                android:id="@+id/rd_Rate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingStart="20dp"
+                                android:paddingLeft="20dp"
+                                android:paddingEnd="5dp"
+                                android:paddingRight="5dp">
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start|center"
+                                    android:layout_marginBottom="5dp"
+                                    android:gravity="start|center"
+                                    android:layoutDirection="rtl"
+                                    android:text="1 Star"
+                                    android:textAlignment="textStart"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start|center"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:gravity="start|center"
+                                    android:layoutDirection="rtl"
+                                    android:text="2 Star"
+                                    android:textAlignment="textStart"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start|center"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:gravity="start|center"
+                                    android:layoutDirection="rtl"
+                                    android:text="3 Star"
+                                    android:textAlignment="textStart"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start|center"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:gravity="start|center"
+                                    android:layoutDirection="rtl"
+                                    android:text="4 Star"
+                                    android:textAlignment="textStart"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start|center"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:gravity="start|center"
+                                    android:layoutDirection="rtl"
+                                    android:text="5 Star"
+                                    android:textAlignment="textStart"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_toStartOf="@+id/imageView3"
+                            android:layout_toLeftOf="@+id/imageView3"
+                            android:animateLayoutChanges="true"
+                            android:gravity="center|left"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:text="Trip Status"
+                                android:textColor="@color/white"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/selected_status"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="5dp"
+                                android:text="None"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            app:srcCompat="@drawable/ic_arrow" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/collapsable3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:animateLayoutChanges="true"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/layout3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:animateLayoutChanges="true"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <RadioGroup
+                                android:id="@+id/rd_Status"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingLeft="20dp"
+                                android:paddingRight="5dp">
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start|center"
+                                    android:layout_marginBottom="5dp"
+                                    android:gravity="start|center"
+                                    android:layoutDirection="rtl"
+                                    android:text="On Going"
+                                    android:textAlignment="textStart"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start|center"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:gravity="start|center"
+                                    android:layoutDirection="rtl"
+                                    android:text="Done"
+                                    android:textAlignment="textStart"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+
+                            </RadioGroup>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/btn_save"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:background="@android:color/transparent"
+                    android:text="Save"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

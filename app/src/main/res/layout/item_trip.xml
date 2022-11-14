@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    android:layout_marginTop="10dp"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/id123"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="cardOnClick">
+
+        <ImageView
+            android:id="@+id/item_trip_image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/travel">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/item_trip_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_toEndOf="@+id/item_trip_image"
+            android:text="Trip Name"
+            android:textSize="24dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/item_trip_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:text="27/22/2001">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/item_trip_from_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="60dp"
+            android:layout_toEndOf="@+id/item_trip_image"
+            android:text="HaNoi - LaoCai"></TextView>
+        <TextView
+            android:id="@+id/item_trip_total_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total cost 0$"
+            android:textStyle="bold"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="30dp"
+            >
+
+        </TextView>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

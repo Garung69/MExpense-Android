@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".tripHistory">
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:fillViewport="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          android:background="@color/SecondaryTextCoor">
+
+        <ImageView
+            android:id="@+id/history_backBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#00FFFFFF"
+            android:src="@drawable/back">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="10dp"
+            android:text="Trip History"
+            android:textColor="@color/white"
+            android:textSize="24dp">
+
+        </TextView>
+
+        <Button
+            android:id="@+id/delete_AllTrip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="2dp"
+            android:backgroundTint="#eb4236"
+            android:text="Delete Trips">
+
+        </Button>
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="50dp"
+          android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_trip"
+            android:layout_marginStart="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </androidx.recyclerview.widget.RecyclerView>
+      </LinearLayout>
+
+
+      <Button
+          android:id="@+id/btn_asyncData"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_alignParentBottom="true"
+          android:backgroundTint="@color/design_default_color_secondary_variant"
+          android:text="Upload Cloud"
+          android:textAllCaps="true"
+          android:textColor="@color/white"
+          android:textSize="16sp" />
+    </RelativeLayout>
+  </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

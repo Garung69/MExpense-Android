@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".statistic">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/SecondaryTextCoor">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Trip Statistic"
+                    android:textColor="@color/white"
+                    android:textSize="24dp">
+
+                </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/chart_layout"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="50dp">
+
+
+                <com.anychart.anychart.AnyChartView
+                    android:id="@+id/any_chart_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/statistic_totalTrip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/chart_layout"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:text="Total Trip: 27 Trip"
+                android:textColor="@color/white"
+                android:textSize="20dp"></TextView>
+
+            <TextView
+                android:id="@+id/statistic_totalCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/chart_layout"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="15dp"
+                android:text="Total Cost: 4000$"
+                android:textColor="@color/white"
+                android:textSize="20dp"></TextView>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/statistic_totalCost"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/blue"
+                    android:layout_height="2dp">
+
+                </View>
+            <TextView
+                android:id="@+id/statistic_highest_cost_trip_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statistic_totalTrip"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="25dp"
+                android:text="Highest cost trip:"
+                android:textColor="@color/white"
+                android:textSize="20dp"></TextView>
+            <TextView
+                android:id="@+id/statistic_highest_cost_trip_name"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_below="@+id/statistic_highest_cost_trip_label"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:text="Trip thu 2">
+            </TextView>
+
+            <TextView
+                android:id="@+id/statistic_highest_cost_trip_date"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_below="@+id/statistic_highest_cost_trip_label"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="27/11/2021"
+                android:layout_marginEnd="5dp"
+                android:textColor="@color/white"
+                android:textSize="20dp"></TextView>
+            <TextView
+                android:id="@+id/statistic_highest_cost_trip_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statistic_highest_cost_trip_name"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:text="From: lao cai">
+            </TextView>
+
+            <TextView
+                android:id="@+id/statistic_highest_cost_trip_to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statistic_highest_cost_trip_date"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="5dp"
+                android:text="To: Ha noi"
+                android:textColor="@color/white"
+                android:textSize="20dp"></TextView>
+
+            <TextView
+                android:id="@+id/statistic_highest_cost_trip_totalExpense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statistic_highest_cost_trip_from"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:text="Total Expense: 27 "
+                android:textColor="@color/white"
+                android:textSize="20dp"></TextView>
+
+            <TextView
+                android:id="@+id/statistic_highest_cost_trip_totalCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statistic_highest_cost_trip_to"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="Total cost: 1200$"
+                android:textColor="@color/white"
+                android:layout_marginEnd="5dp"
+                android:textSize="20dp"></TextView>
+            <Button
+                android:id="@+id/viewHighestCostTrip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#eb9605"
+                android:text="View Trip"
+                android:layout_below="@+id/statistic_highest_cost_trip_totalCost">
+
+            </Button>
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomAppBar"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/SecondaryTextCoor"
+        app:itemIconTint="@color/blueTextCoor"
+        app:itemTextColor="#FAFAFA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/activity_main_nav3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
